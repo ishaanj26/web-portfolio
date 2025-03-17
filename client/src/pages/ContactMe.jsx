@@ -23,7 +23,7 @@ function ContactMe() {
         setIsSubmitting(true)
 
         try {
-            const response = await fetch("http://localhost:5000/submit", {
+            const response = await fetch("https://ishaan-jain-web-portfolio.onrender.com/submit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formState),
