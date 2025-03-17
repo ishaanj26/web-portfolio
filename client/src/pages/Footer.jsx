@@ -14,7 +14,7 @@ function Footer() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="flex space-x-5 my-2 justify-center"
         >
-          <SocialMediaIcons />
+          <SocialMediaIcons iconWidth={8} iconHeight={8} iconSize={1} />
         </motion.div>
         <motion.div 
           className="flex flex-col items-center"

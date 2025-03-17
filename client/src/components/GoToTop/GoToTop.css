@@ -11,7 +11,8 @@
     width: 3rem;
     height: 3rem;
     color: #fff;
-    background-color: rgb(128, 128, 185);
+    background-color: rgb(89, 89, 239);
+
     /* box-shadow: ${({ theme }) => theme.colors.shadow}; */
     border-radius: 50%;
     position: fixed;
@@ -25,7 +26,8 @@
 }
 
 .top-btn:hover{
-    background-color: rgb(97, 97, 140);
+    background-color: rgb(17, 17, 126);
+
 }
 
 .top-btn--icon {

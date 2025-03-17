@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, ExternalLink, Github, FileText, Download } from 'lucide-react';
+import { CheckCircle ,ChevronLeft, ChevronRight, ExternalLink, Github, FileText, Download } from 'lucide-react';
 
 const ProjectSlider = ({ projectsData }) => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -124,7 +124,7 @@ const ProjectSlider = ({ projectsData }) => {
                     onMouseMove={handleTouchMove}
                     onMouseUp={handleTouchEnd}
                     onMouseLeave={handleTouchEnd}
-                    style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                     {projectsData.map((project, index) => {
                         const isActive = index === activeIndex;
                         return (
@@ -132,9 +132,8 @@ const ProjectSlider = ({ projectsData }) => {
                                 className="hover:cursor-pointer project-card flex-shrink-0 w-[280px] sm:w-[350px] md:w-[450px] snap-center mx-4 my-8"
                                 onClick={() => goToSlide(index)}>
                                 <motion.div
-                                    className={`h-auto min-h-[420px] rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-xl border border-gray-200 dark:border-gray-700 flex flex-col transition-all duration-300 ${
-                                        isActive ? "ring-2 ring-blue-500 scale-100 opacity-100 z-10" : "scale-[0.85] opacity-70"
-                                    }`}
+                                    className={`h-auto min-h-[420px] rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-xl border border-gray-200 dark:border-gray-700 flex flex-col transition-all duration-300 ${isActive ? "ring-2 ring-blue-500 scale-100 opacity-100 z-10" : "scale-[0.85] opacity-70"
+                                        }`}
                                     whileHover={{ scale: isActive ? 1.02 : 0.9 }}
                                     transition={{ duration: 0.3 }}>
                                     <div className="relative w-full h-40 bg-gray-200 dark:bg-gray-700 overflow-hidden">
@@ -143,6 +142,26 @@ const ProjectSlider = ({ projectsData }) => {
                                     <div className="p-4 flex-1 flex flex-col">
                                         <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
                                         <p className="text-gray-600 dark:text-gray-300 text-xs md:text-sm mb-3 flex-1 overflow-y-auto max-h-24">{project.description}</p>
+                                        {project.features && project.features.length > 0 && (
+                                            <div className="mb-4 bg-gray-50 dark:bg-gray-700/40 rounded-lg p-3">
+                                                <h4 className="text-sm md:text-base font-semibold text-gray-800 dark:text-gray-200 mb-2 flex items-center">
+                                                    <CheckCircle className="w-3.5 h-3.5 md:w-4 md:h-4 text-indigo-500 dark:text-indigo-400 mr-1.5" />
+                                                    Key Features
+                                                </h4>
+                                                <div className="overflow-y-auto max-h-28 pr-1 space-y-1.5">
+                                                    {project.features.map((feature, i) => (
+                                                        <div key={i} className="flex items-start gap-2 group">
+                                                            <div className="mt-0.5 min-w-4">
+                                                                <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 dark:bg-indigo-500 group-hover:bg-indigo-600 dark:group-hover:bg-indigo-400 transition-colors"></div>
+                                                            </div>
+                                                            <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 line-clamp-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+                                                                {feature}
+                                                            </p>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
                                         <div className="mb-3">
                                             <div className="flex flex-wrap gap-1.5">
                                                 {project.technologies && project.technologies.slice(0, 4).map((tech, i) => (
@@ -225,7 +244,7 @@ const ProjectSlider = ({ projectsData }) => {
                             <div className="absolute inset-0 bg-gray-200 dark:bg-gray-600 rounded-full"></div>
                             {isActive && (
                                 <div className="absolute inset-0 bg-indigo-600 rounded-full origin-left"
-                                    style={{animation: autoRotate ? `progressFill ${autoRotateInterval / 1000}s linear` : 'none'}}></div>
+                                    style={{ animation: autoRotate ? `progressFill ${autoRotateInterval / 1000}s linear` : 'none' }}></div>
                             )}
                         </button>
                     );

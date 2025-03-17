@@ -1,295 +1,660 @@
 {
-    "navbarItems": [
+  "navbarItems": [
+    {
+      "name": "Home",
+      "href": "#home"
+    },
+    {
+      "name": "About",
+      "href": "#about-me"
+    },
+    {
+      "name": "Experience",
+      "href": "#experience"
+    },
+    {
+      "name": "Projects",
+      "href": "#projects"
+    },
+    {
+      "name": "Skills",
+      "href": "#skills"
+    },
+    {
+      "name": "Services",
+      "href": "#services"
+    },
+    {
+      "name": "Contact",
+      "href": "#contact-me"
+    }
+  ],
+  "socialMediaPlatforms": [
+    {
+      "icon": "faLinkedin",
+      "href": "https://www.linkedin.com/in/ishaan-jain-068b0b243/",
+      "class": "bg-blue-500 hover:bg-blue-800"
+    },
+    {
+      "icon": "faInstagram",
+      "href": "https://www.instagram.com/ishaanj26/",
+      "class": "bg-pink-500 hover:bg-pink-800"
+    },
+    {
+      "icon": "faGithub",
+      "href": "https://github.com/ishaanj26",
+      "class": "bg-gray-500 hover:bg-gray-800"
+    },
+    {
+      "icon": null,
+      "href": "https://leetcode.com/u/ishaanj26/",
+      "image": "https://leetcode.com/favicon.ico",
+      "class": "bg-orange-400 hover:bg-orange-800"
+    }
+  ],
+  "projectsData": [
+    {
+      "id": 1,
+      "title": "MoonLit E-Commerce Platform",
+      "description": "A full-stack e-commerce application offering a seamless shopping experience with secure payment integration, user authentication, and real-time product management.",
+      "image": "/assets/projects/moonlit-project.webp",
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "Razorpay",
+        "Firestore",
+        "Provider",
+        "REST API"
+      ],
+      "features": [
+        "User authentication & authorization",
+        "Secure payment integration via Razorpay",
+        "Real-time product updates with Firestore",
+        "State management using Provider",
+        "Optimized UI for smooth user experience"
+      ],
+      "liveLink": "https://drive.google.com/file/d/1Y4FVWVjPVYIJieN0WPUp6GUR5SECNbvI/view?t=5",
+      "apkLink": "https://drive.google.com/file/d/1xEzW9FfuCUIYA5HU6tEf3z-IwQ25d2u2/view",
+      "githubLink": "https://github.com/ishaanj26/ecom_app",
+      "mediumLink": "https://medium.com/@ishaanj2612/building-moonlit-our-fashion-forward-e-commerce-app-8ed2e4101115"
+    },
+    {
+      "id": 2,
+      "title": "Portfolio Website",
+      "description": "A responsive personal portfolio website showcasing projects, skills, and experience with an elegant UI and animations.",
+      "image": "/assets/projects/web-portfolio.png",
+      "technologies": [
+        "Next.js",
+        "React.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Vercel",
+        "SEO Optimization"
+      ],
+      "features": [
+        "Modern UI/UX with smooth animations",
+        "Optimized for fast performance and SEO",
+        "Fully responsive across all devices",
+        "Dynamic project and blog sections"
+      ],
+      "githubLink": "https://github.com/ishaanj26/web-portfolio"
+    },
+    {
+      "id": 3,
+      "title": "AapKaGhar Real Estate App",
+      "description": "A real estate platform providing property listings, filtering, and seamless user interactions to simplify property searches.",
+      "image": "/assets/projects/aapkaghar-project.png",
+      "technologies": [
+        "MERN Stack",
+        "MongoDB",
+        "Express.js",
+        "React",
+        "Node.js",
+        "Redux Toolkit",
+        "JWT Authentication"
+      ],
+      "features": [
+        "User authentication with JWT & Firebase",
+        "Advanced search & filtering for properties",
+        "Secure database with MongoDB & Firestore",
+        "State management using Redux Toolkit"
+      ],
+      "liveLink": "https://drive.google.com/file/d/1KHL3qI1e7Y1bah8eyCzpuoLr0u_LRfGD/view?usp=sharing",
+      "githubLink": "https://github.com/ishaanj26/aapkaghar"
+    },
+    {
+      "id": 4,
+      "title": "SMS Spam Classifier",
+      "description": "A machine learning-based web application that classifies SMS messages as spam or ham using NLP techniques and Machine Learning.",
+      "image": "/assets/projects/sms-classifier.png",
+      "technologies": [
+        "Python",
+        "Scikit-Learn",
+        "NLTK",
+        "Pandas",
+        "NumPy",
+        "Streamlit",
+        "TF-IDF Vectorization",
+        "Logistic Regression"
+      ],
+      "features": [
+        "Trained ML model with high accuracy",
+        "Real-time SMS classification",
+        "Interactive UI built with Streamlit",
+        "TF-IDF Vectorization for text preprocessing"
+      ],
+      "githubLink": "https://github.com/ishaanj26/machine_learning_project/tree/main/SMSSpamClassifier"
+    },
+    {
+      "id": 5,
+      "title": "ReCommando - Movie Recommendation System",
+      "description": "A movie recommendation system utilizing content-based filtering to suggest personalized movies based on user preferences.",
+      "image": "/assets/projects/recommando-project.png",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Scikit-Learn",
+        "NLTK",
+        "Streamlit",
+        "Pickle",
+        "Matplotlib",
+        "Seaborn"
+      ],
+      "features": [
+        "Content-based filtering algorithm",
+        "Dataset of 5000+ movies for recommendations",
+        "Interactive UI built with Streamlit"
+      ],
+      "liveLink": "https://drive.google.com/file/d/1raG06slmqEfTZ1B0moTrCD8dqu0YqN7V/view?usp=sharing",
+      "githubLink": "https://github.com/ishaanj26/machine_learning_project/tree/main/MovieRecommendation"
+    }
+  ],
+  "experiences": [
+    {
+      "id": 1,
+      "title": "Full-Stack & Mobile App Development",
+      "description": "Building innovative and impactful applications with precision.",
+      "icon": "Rocket",
+      "period": "2020 - Present",
+      "details": "Designed, developed, and deployed 15+ projects using modern web and mobile technologies. Built scalable applications leveraging the MERN stack for web and Flutter for cross-platform mobile apps. Notable projects include Amusik (a web music player), reCommando (a movie recommendation system using ML), and Moonlit (an e-commerce app).",
+      "skills": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "MongoDB",
+        "Flutter",
+        "Firebase",
+        "UI/UX Design",
+        "Machine Learning"
+      ],
+      "align": "left"
+    },
+    {
+      "id": 2,
+      "title": "Flutter Development & Continuous Learning",
+      "description": "Expanding technical expertise through hands-on projects and research.",
+      "icon": "BookOpen",
+      "period": "July 2024 - Aug 2024",
+      "details": "Completed a Flutter development course from Brain Mentors, gaining expertise in building scalable mobile applications. Developed Moonlit, an e-commerce app with Firebase integration. Explored Data Science by building reCommando, a personalized movie recommendation system powered by machine learning. Currently learning DBMS and system design principles.",
+      "skills": [
+        "Flutter",
+        "Firebase",
+        "Data Science",
+        "Machine Learning",
+        "DBMS",
+        "Full-Stack Development"
+      ],
+      "align": "right"
+    },
+    {
+      "id": 3,
+      "title": "Hackathons & Competitive Development",
+      "description": "Solving real-world problems through innovation and collaboration.",
+      "icon": "Calendar",
+      "period": "2024 - Present",
+      "details": "Actively participating in hackathons and tech competitions. Developed 'Tripizzy' during the Smart Hackathon, a trip management app that optimizes travel plans based on population density. Gained experience in rapid prototyping, problem-solving, and working under tight deadlines. Also explored AI/ML-driven solutions for various projects.",
+      "skills": [
+        "Problem Solving",
+        "UI/UX Design",
+        "API Development",
+        "Agile Methodologies",
+        "Competitive Programming",
+        "AI & ML"
+      ],
+      "align": "left"
+    },
+    {
+      "id": 4,
+      "title": "Freelance & Client-Based Projects",
+      "description": "Delivering tailored digital solutions to businesses and startups.",
+      "icon": "Users",
+      "period": "2023 - Present",
+      "details": "Worked on multiple client projects, including AapKaGhar, a real estate platform developed for Goodluck Company. Focused on creating highly responsive and user-friendly web applications using the MERN stack. Ensured seamless UI/UX, performance optimization, and business scalability.",
+      "skills": [
+        "MERN Stack",
+        "Web Development",
+        "Client Communication",
+        "Project Management",
+        "UI/UX Design"
+      ],
+      "align": "right"
+    },
+    {
+      "id": 5,
+      "title": "Web Development Internship at Traincape",
+      "description": "Bridging technology and business with scalable web solutions.",
+      "icon": "Briefcase",
+      "period": "2025 - Present",
+      "details": "Currently working as a Web Development Intern at Traincape Industries, focusing on building scalable, high-performance web applications. Gaining hands-on experience in full-stack development, performance optimization, and collaborative problem-solving in a real-world business environment.",
+      "skills": [
+        "MERN Stack",
+        "Web Development",
+        "Performance Optimization",
+        "Team Collaboration",
+        "Business-Oriented Development"
+      ],
+      "align": "left"
+    },
+    {
+      "id": 6,
+      "title": "Software Research & System Design",
+      "description": "Exploring software architecture, data structures, and business-driven development.",
+      "icon": "Lightbulb",
+      "period": "2024 - Present",
+      "details": "Developed a Smart Parking System, focusing on efficiency, automation, and IoT integration. Conducted research on Software Requirement Specification (SRS) documentation, learning how to plan and document large-scale projects effectively. Also explored database management and system design for optimized application performance.",
+      "skills": [
+        "Software Architecture",
+        "DBMS",
+        "System Design",
+        "Business Analysis",
+        "Project Documentation"
+      ],
+      "align": "right"
+    },
+    {
+      "id": 7,
+      "title": "Business & Tech Synergy",
+      "description": "Merging technology with strategic business insights.",
+      "icon": "BarChart",
+      "period": "2025 - Present",
+      "details": "Pursuing interests in business development alongside technical skills. Working at Traincape has provided exposure to how businesses leverage technology. Additionally, considering an MBA with a focus on management and entrepreneurship to bridge the gap between tech innovation and business impact.",
+      "skills": [
+        "Business Development",
+        "Market Research",
+        "Tech-Driven Innovation",
+        "Entrepreneurship"
+      ],
+      "align": "left"
+    }
+  ],
+  "skillsData": [
+    {
+      "category": "Frontend",
+      "icon": "Globe",
+      "color": "from-blue-500 to-blue-600",
+      "skills": [
         {
-            "name": "Home",
-            "href": "#home"
+          "name": "React.js",
+          "level": 90
         },
         {
-            "name": "About",
-            "href": "#about-me"
+          "name": "Next.js",
+          "level": 85
         },
         {
-            "name": "Experience",
-            "href": "#experience"
+          "name": "JavaScript",
+          "level": 92
         },
         {
-            "name": "Projects",
-            "href": "#projects"
+          "name": "HTML5/CSS3",
+          "level": 95
         },
         {
-            "name": "Skills",
-            "href": "#skills"
+          "name": "Tailwind CSS",
+          "level": 88
         },
         {
-            "name": "Services",
-            "href": "#services"
+          "name": "Redux",
+          "level": 82
         },
         {
-            "name": "Contact",
-            "href": "#contact-me"
+          "name": "Framer Motion",
+          "level": 75
         }
-    ],
-    "socialMediaPlatforms": [
+      ]
+    },
+    {
+      "category": "Backend",
+      "icon": "Server",
+      "color": "from-green-500 to-green-600",
+      "skills": [
         {
-            "icon": "faLinkedin",
-            "href": "https://www.linkedin.com/in/ishaan-jain-068b0b243/",
-            "class": "bg-blue-500 hover:bg-blue-800"
+          "name": "Node.js",
+          "level": 88
         },
         {
-            "icon": "faInstagram",
-            "href": "https://www.instagram.com/ishaanj26/",
-            "class": "bg-pink-500 hover:bg-pink-800"
+          "name": "Express.js",
+          "level": 85
         },
         {
-            "icon": "faGithub",
-            "href": "https://github.com/ishaanj26",
-            "class": "bg-gray-500 hover:bg-gray-800"
+          "name": "MongoDB",
+          "level": 80
         },
         {
-            "icon": null,
-            "href": "https://leetcode.com/u/ishaanj26/",
-            "image": "https://leetcode.com/favicon.ico",
-            "class": "bg-orange-400 hover:bg-orange-800"
+          "name": "Firebase",
+          "level": 78
+        },
+        {
+          "name": "RESTful APIs",
+          "level": 90
+        },
+        {
+          "name": "Socket.io",
+          "level": 68
+        },
+        {
+          "name": "Django (Beginner)",
+          "level": 50
         }
-    ],
-    "projectsData": [
+      ]
+    },
+    {
+      "category": "Mobile",
+      "icon": "Smartphone",
+      "color": "from-purple-500 to-purple-600",
+      "skills": [
         {
-            "id": 1,
-            "title": "MoonLit E-Commerce Platform",
-            "description": "A full-stack e-commerce application offering a seamless shopping experience with secure payment integration, user authentication, and real-time product management.",
-            "image": "/assets/projects/moonlit-project.webp",
-            "technologies": [
-                "Flutter",
-                "Dart",
-                "Firebase",
-                "Razorpay",
-                "Firestore",
-                "Provider",
-                "REST API"
-            ],
-            "features": [
-                "User authentication & authorization",
-                "Secure payment integration via Razorpay",
-                "Real-time product updates with Firestore",
-                "State management using Provider",
-                "Optimized UI for smooth user experience"
-            ],
-            "liveLink": "https://drive.google.com/file/d/1Y4FVWVjPVYIJieN0WPUp6GUR5SECNbvI/view?t=5",
-            "apkLink": "https://drive.google.com/file/d/1xEzW9FfuCUIYA5HU6tEf3z-IwQ25d2u2/view",
-            "githubLink": "https://github.com/ishaanj26/ecom_app",
-            "mediumLink": "https://medium.com/@ishaanj2612/building-moonlit-our-fashion-forward-e-commerce-app-8ed2e4101115"
+          "name": "React Native",
+          "level": 75
         },
         {
-            "id": 2,
-            "title": "Portfolio Website",
-            "description": "A responsive personal portfolio website showcasing projects, skills, and experience with an elegant UI and animations.",
-            "image": "/assets/projects/web-portfolio.png",
-            "technologies": [
-                "Next.js",
-                "React.js",
-                "MongoDB",
-                "Tailwind CSS",
-                "Framer Motion",
-                "Vercel",
-                "SEO Optimization"
-            ],
-            "features": [
-                "Modern UI/UX with smooth animations",
-                "Optimized for fast performance and SEO",
-                "Fully responsive across all devices",
-                "Dynamic project and blog sections"
-            ],
-            "liveLink": "https://example.com",
-            "githubLink": "https://github.com/example/project"
+          "name": "Flutter",
+          "level": 65
         },
         {
-            "id": 3,
-            "title": "AapKaGhar Real Estate App",
-            "description": "A real estate platform providing property listings, filtering, and seamless user interactions to simplify property searches.",
-            "image": "/assets/projects/aapkaghar-project.png",
-            "technologies": [
-                "MERN Stack",
-                "MongoDB",
-                "Express.js",
-                "React",
-                "Node.js",
-                "Redux Toolkit",
-                "JWT Authentication"
-            ],
-            "features": [
-                "User authentication with JWT & Firebase",
-                "Advanced search & filtering for properties",
-                "Secure database with MongoDB & Firestore",
-                "State management using Redux Toolkit"
-            ],
-            "liveLink": "https://drive.google.com/file/d/1KHL3qI1e7Y1bah8eyCzpuoLr0u_LRfGD/view?usp=sharing",
-            "githubLink": "https://github.com/ishaanj26/aapkaghar"
+          "name": "Dart",
+          "level": 70
         },
         {
-            "id": 4,
-            "title": "SMS Spam Classifier",
-            "description": "A machine learning-based web application that classifies SMS messages as spam or ham using NLP techniques and Machine Learning.",
-            "image": "/assets/projects/sms-classifier.png",
-            "technologies": [
-                "Python",
-                "Scikit-Learn",
-                "NLTK",
-                "Pandas",
-                "NumPy",
-                "Streamlit",
-                "TF-IDF Vectorization",
-                "Logistic Regression"
-            ],
-            "features": [
-                "Trained ML model with high accuracy",
-                "Real-time SMS classification",
-                "Interactive UI built with Streamlit",
-                "TF-IDF Vectorization for text preprocessing"
-            ],
-            "liveLink": "https://example.com",
-            "githubLink": "https://github.com/ishaanj26/machine_learning_project/tree/main/SMSSpamClassifier"
+          "name": "Responsive Design",
+          "level": 92
         },
         {
-            "id": 5,
-            "title": "ReCommando - Movie Recommendation System",
-            "description": "A movie recommendation system utilizing content-based filtering to suggest personalized movies based on user preferences.",
-            "image": "/assets/projects/recommando-project.png",
-            "technologies": [
-                "Python",
-                "Pandas",
-                "NumPy",
-                "Scikit-Learn",
-                "NLTK",
-                "Streamlit",
-                "Pickle",
-                "Matplotlib",
-                "Seaborn"
-            ],
-            "features": [
-                "Content-based filtering algorithm",
-                "Dataset of 5000+ movies for recommendations",
-                "Interactive UI built with Streamlit"
-            ],    
-            "liveLink": "https://example.com",
-            "githubLink": "https://github.com/ishaanj26/machine_learning_project/tree/main/MovieRecommendation"
+          "name": "Android Development",
+          "level": 70
+        },
+        {
+          "name": "iOS Development",
+          "level": 65
         }
-    ],
-    "experiences": [
+      ]
+    },
+    {
+      "category": "Programming Languages",
+      "icon": "Code",
+      "color": "from-yellow-500 to-yellow-600",
+      "skills": [
         {
-            "id": 1,
-            "title": "Full-Stack & Mobile App Development",
-            "description": "Building innovative and impactful applications with precision.",
-            "icon": "Rocket",
-            "period": "2020 - Present",
-            "details": "Designed, developed, and deployed 15+ projects using modern web and mobile technologies. Built scalable applications leveraging the MERN stack for web and Flutter for cross-platform mobile apps. Notable projects include Amusik (a web music player), reCommando (a movie recommendation system using ML), and Moonlit (an e-commerce app).",
-            "skills": [
-                "React",
-                "Next.js",
-                "Node.js",
-                "MongoDB",
-                "Flutter",
-                "Firebase",
-                "UI/UX Design",
-                "Machine Learning"
-            ],
-            "align": "left"
+          "name": "JavaScript",
+          "level": 92
         },
         {
-            "id": 2,
-            "title": "Flutter Development & Continuous Learning",
-            "description": "Expanding technical expertise through hands-on projects and research.",
-            "icon": "BookOpen",
-            "period": "July 2024 - Aug 2024",
-            "details": "Completed a Flutter development course from Brain Mentors, gaining expertise in building scalable mobile applications. Developed Moonlit, an e-commerce app with Firebase integration. Explored Data Science by building reCommando, a personalized movie recommendation system powered by machine learning. Currently learning DBMS and system design principles.",
-            "skills": [
-                "Flutter",
-                "Firebase",
-                "Data Science",
-                "Machine Learning",
-                "DBMS",
-                "Full-Stack Development"
-            ],
-            "align": "right"
+          "name": "Python",
+          "level": 75
         },
         {
-            "id": 3,
-            "title": "Hackathons & Competitive Development",
-            "description": "Solving real-world problems through innovation and collaboration.",
-            "icon": "Calendar",
-            "period": "2024 - Present",
-            "details": "Actively participating in hackathons and tech competitions. Developed 'Tripizzy' during the Smart Hackathon, a trip management app that optimizes travel plans based on population density. Gained experience in rapid prototyping, problem-solving, and working under tight deadlines. Also explored AI/ML-driven solutions for various projects.",
-            "skills": [
-                "Problem Solving",
-                "UI/UX Design",
-                "API Development",
-                "Agile Methodologies",
-                "Competitive Programming",
-                "AI & ML"
-            ],
-            "align": "left"
+          "name": "C/C++",
+          "level": 85
         },
         {
-            "id": 4,
-            "title": "Freelance & Client-Based Projects",
-            "description": "Delivering tailored digital solutions to businesses and startups.",
-            "icon": "Users",
-            "period": "2023 - Present",
-            "details": "Worked on multiple client projects, including AapKaGhar, a real estate platform developed for Goodluck Company. Focused on creating highly responsive and user-friendly web applications using the MERN stack. Ensured seamless UI/UX, performance optimization, and business scalability.",
-            "skills": [
-                "MERN Stack",
-                "Web Development",
-                "Client Communication",
-                "Project Management",
-                "UI/UX Design"
-            ],
-            "align": "right"
+          "name": "Java",
+          "level": 70
         },
         {
-            "id": 5,
-            "title": "Web Development Internship at Traincape",
-            "description": "Bridging technology and business with scalable web solutions.",
-            "icon": "Briefcase",
-            "period": "2025 - Present",
-            "details": "Currently working as a Web Development Intern at Traincape Industries, focusing on building scalable, high-performance web applications. Gaining hands-on experience in full-stack development, performance optimization, and collaborative problem-solving in a real-world business environment.",
-            "skills": [
-                "MERN Stack",
-                "Web Development",
-                "Performance Optimization",
-                "Team Collaboration",
-                "Business-Oriented Development"
-            ],
-            "align": "left"
+          "name": "Dart",
+          "level": 75
         },
         {
-            "id": 6,
-            "title": "Software Research & System Design",
-            "description": "Exploring software architecture, data structures, and business-driven development.",
-            "icon": "Lightbulb",
-            "period": "2024 - Present",
-            "details": "Developed a Smart Parking System, focusing on efficiency, automation, and IoT integration. Conducted research on Software Requirement Specification (SRS) documentation, learning how to plan and document large-scale projects effectively. Also explored database management and system design for optimized application performance.",
-            "skills": [
-                "Software Architecture",
-                "DBMS",
-                "System Design",
-                "Business Analysis",
-                "Project Documentation"
-            ],
-            "align": "right"
-        },
-        {
-            "id": 7,
-            "title": "Business & Tech Synergy",
-            "description": "Merging technology with strategic business insights.",
-            "icon": "BarChart",
-            "period": "2025 - Present",
-            "details": "Pursuing interests in business development alongside technical skills. Working at Traincape has provided exposure to how businesses leverage technology. Additionally, considering an MBA with a focus on management and entrepreneurship to bridge the gap between tech innovation and business impact.",
-            "skills": [
-                "Business Development",
-                "Market Research",
-                "Tech-Driven Innovation",
-                "Entrepreneurship"
-            ],
-            "align": "left"
+          "name": "SQL",
+          "level": 75
         }
-    ]
+      ]
+    },
+    {
+      "category": "Databases",
+      "icon": "Database",
+      "color": "from-red-500 to-red-600",
+      "skills": [
+        {
+          "name": "MongoDB",
+          "level": 85
+        },
+        {
+          "name": "MySQL",
+          "level": 75
+        },
+        {
+          "name": "Firebase",
+          "level": 80
+        }
+      ]
+    },
+    {
+      "category": "DevOps & Tools",
+      "icon": "Monitor",
+      "color": "from-indigo-500 to-indigo-600",
+      "skills": [
+        {
+          "name": "Git/GitHub",
+          "level": 90
+        },
+        {
+          "name": "Docker",
+          "level": 70
+        },
+        {
+          "name": "CI/CD",
+          "level": 75
+        },
+        {
+          "name": "AWS",
+          "level": 65
+        },
+        {
+          "name": "Vercel",
+          "level": 85
+        },
+        {
+          "name": "Netlify",
+          "level": 80
+        },
+        {
+          "name": "RazorPay Integration",
+          "level": 70
+        },
+        {
+          "name": "Firebase Hosting",
+          "level": 78
+        }
+      ]
+    },
+    {
+      "category": "Design",
+      "icon": "PenToolIcon",
+      "color": "from-pink-500 to-pink-600",
+      "skills": [
+        {
+          "name": "Figma",
+          "level": 80
+        },
+        {
+          "name": "Adobe XD",
+          "level": 70
+        },
+        {
+          "name": "UI/UX Principles",
+          "level": 85
+        },
+        {
+          "name": "Responsive Design",
+          "level": 90
+        }
+      ]
+    },
+    {
+      "category": "Other",
+      "icon": "Zap",
+      "color": "from-cyan-500 to-cyan-600",
+      "skills": [
+        {
+          "name": "Problem Solving",
+          "level": 95
+        },
+        {
+          "name": "Project Management",
+          "level": 80
+        },
+        {
+          "name": "Business Development",
+          "level": 78
+        },
+        {
+          "name": "Public Speaking",
+          "level": 88
+        },
+        {
+          "name": "SEO Basics",
+          "level": 75
+        },
+        {
+          "name": "Performance Optimization",
+          "level": 85
+        },
+        {
+          "name": "Data Science Basics",
+          "level": 70
+        },
+        {
+          "name": "Machine Learning (Beginner)",
+          "level": 65
+        },
+        {
+          "name": "Teamwork & Collaboration",
+          "level": 92
+        },
+        {
+          "name": "Negotiation",
+          "level": 80
+        },
+        {
+          "name": "Social Media Handling",
+          "level": 92
+        }
+      ]
+    },
+    {
+      "category": "Other Technical Skills",
+      "icon": "Cog",
+      "color": "from-gray-900 to-gray-700",
+      "skills": [
+        {
+          "name": "Performance Optimization",
+          "level": 85
+        },
+        {
+          "name": "Testing (Jest, RTL)",
+          "level": 78
+        },
+        {
+          "name": "Web Scraping",
+          "level": 72
+        },
+        {
+          "name": "Monitor   Computing (Basics)",
+          "level": 65
+        },
+        {
+          "name": "API Development",
+          "level": 88
+        },
+        {
+          "name": "Auth & Security",
+          "level": 80
+        }
+      ]
+    }
+  ],
+  "learningTopics": [
+    {
+      "icon": "BrainCircuit",
+      "title": "Advanced Machine Learning",
+      "description": "Exploring deep learning, NLP, and expanding knowledge in TensorFlow & PyTorch for AI-driven applications."
+    },
+    {
+      "icon": "Cpu",
+      "title": "Full-Stack Scaling",
+      "description": "Learning database optimization, microservices, and high-performance API development for scalable applications."
+    },
+    {
+      "icon": "Smartphone",
+      "title": "React Native & Cross-Platform Apps",
+      "description": "Enhancing mobile development expertise by building feature-rich cross-platform apps using React Native & Flutter."
+    },
+    {
+      "icon": "BriefcaseBusiness",
+      "title": "Business & Entrepreneurship",
+      "description": "Preparing for CAT while exploring business development strategies, product-market fit, and startup growth tactics."
+    },
+    {
+      "icon": "Gamepad2",
+      "title": "Game Development",
+      "description": "Researching Unreal Engine & Unity to build an original mythology-inspired PS4 game, ‘Ashwatva – The Eternal War.’"
+    },
+    {
+      "icon": "Database",
+      "title": "DBMS & System Design",
+      "description": "Strengthening database fundamentals, query optimization, and scalable system architectures for large-scale applications."
+    }
+  ],
+  "services": [
+    {
+      "icon": "FaCode",
+      "title": "Web Development",
+      "description": "Building responsive and modern web applications with cutting-edge technologies.",
+      "iconColor": "blue"
+    },
+    {
+      "icon": "FaPalette",
+      "title": "UI/UX Design",
+      "description": "Creating visually appealing and user-friendly interfaces for a seamless experience.",
+      "iconColor": "pink"
+    },
+    {
+      "icon": "FaChartLine",
+      "title": "SEO & Marketing",
+      "description": "Optimizing websites for search engines and boosting online visibility.",
+      "iconColor": "green"
+    },
+    {
+      "icon": "FaMobileAlt",
+      "title": "App Development",
+      "description": "Developing high-performance mobile applications using Flutter and React Native.",
+      "iconColor": "purple"
+    },
+    {
+      "icon": "FaDatabase",
+      "title": "Database Management",
+      "description": "Designing and managing efficient database systems using SQL and NoSQL.",
+      "iconColor": "orange"
+    },
+    {
+      "icon": "FaRobot",
+      "title": "AI & Machine Learning",
+      "description": "Implementing intelligent systems and predictive models for data-driven solutions.",
+      "iconColor":"yellow"
+    }
+  ]
 }

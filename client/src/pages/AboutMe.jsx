@@ -86,7 +86,7 @@ function AboutMe() {
     return (
         <section className="mt-10 mb-10 flex flex-col items-center justify-center py-10 px-5">
              <motion.h1
-                className=" my-name  mb-20 lg:mb-10 text-6xl font-bold tracking-tight"
+                className=" my-name  mb-20 lg:mb-10 text-4xl md:text-6xl font-bold tracking-tight"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}

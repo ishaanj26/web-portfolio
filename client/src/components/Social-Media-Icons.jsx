@@ -10,7 +10,11 @@ const iconMap = {
     faGithub,
 };
 
-function SocialMediaIcons() {
+function SocialMediaIcons({
+    iconWidth = 12,
+    iconHeight = 12,
+    iconSize = 2 // new prop for dynamic icon size
+}) {
     return (
         <>
             {
@@ -21,12 +25,12 @@ function SocialMediaIcons() {
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         key={index}
                         href={platform.href}
-                        className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-lg transition-all duration-300 ${platform.class} hover:scale-110`}
+                        className={`w-${iconWidth} h-${iconWidth} rounded-full flex items-center justify-center text-${iconSize}xl shadow-lg transition-all duration-300 ${platform.class} hover:scale-110`}
                     >
                         {platform.icon ? (
                             <FontAwesomeIcon icon={iconMap[platform.icon]} className="text-white" />
                         ) : (
-                            <img src={platform.image} alt="LeetCode" className="h-6 w-6" />
+                            <img src={platform.image} alt="LeetCode" className={`w-${iconWidth/2} h-${iconWidth/2} `} />
                         )}
                     </motion.a>
                 ))
