@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 // import styled from "styled-components";
 import { FaArrowUp } from "react-icons/fa";
-import './gototop.css'
+import './GoToTop.css'
 export default function GoToTop() {
     const [isVisible, setIsVisible] = useState(false);
 
