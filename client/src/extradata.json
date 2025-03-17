@@ -1,0 +1,55 @@
+{
+    "projectsData": [
+        {
+            "id": 4,
+            "title": "Weather Dashboard",
+            "description": "A web application that provides real-time weather updates and forecasts for multiple locations, using an intuitive dashboard.",
+            "image": "/assets/logo.png",
+            "technologies": [
+                "JavaScript",
+                "OpenWeather API",
+                "Chart.js",
+                "HTML",
+                "CSS",
+                "Bootstrap",
+                "Axios"
+            ],
+            "liveLink": "https://example.com",
+            "githubLink": "https://github.com/example/project"
+        },
+        {
+            "id": 5,
+            "title": "Social Media Platform",
+            "description": "A social networking web application enabling users to create posts, like, comment, chat in real-time, and manage profiles.",
+            "image": "/assets/logo.png",
+            "technologies": [
+                "React.js",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Socket.io",
+                "Redux",
+                "WebSockets",
+                "JWT Authentication"
+            ],
+            "liveLink": "https://example.com",
+            "githubLink": "https://github.com/example/project"
+        },
+        {
+            "id": 6,
+            "title": "Fitness Tracker",
+            "description": "A mobile application to track workouts, nutrition, and fitness progress, featuring visual analytics and goal setting.",
+            "image": "/assets/logo.png",
+            "technologies": [
+                "React Native",
+                "Firebase",
+                "D3.js",
+                "Redux",
+                "Expo",
+                "React Navigation"
+            ],
+            "liveLink": "https://example.com",
+            "githubLink": "https://github.com/example/project"
+        }
+    ]
+}
