@@ -23,7 +23,7 @@ const ExperienceTimeline = () => {
     return (
         <div className="relative flex flex-col items-center w-full pt-4 pb-16 px-4 bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
             <motion.h1
-                className="my-name mb-16 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
+                className="  dark:text-white my-name mb-16 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}

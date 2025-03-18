@@ -60,7 +60,7 @@ function ContactMe() {
     return (
         <div className="relative flex flex-col items-center w-full py-4 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950">
         <motion.h1
-            className="my-name mb-12 sm:mb-16 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight text-center"
+            className="dark:text-white my-name mb-12 sm:mb-16 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight text-center"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}

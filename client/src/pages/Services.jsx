@@ -49,7 +49,7 @@ function Services() {
   return (
     <div className="relative flex flex-col items-center w-full pb-12 sm:pb-14 md:pb-16 pt-4 px-4 bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
       <motion.h1
-        className="my-name text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight mb-8 sm:mb-12 md:mb-16"
+        className="dark:text-white my-name text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight mb-8 sm:mb-12 md:mb-16"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

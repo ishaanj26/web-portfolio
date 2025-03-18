@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
-  
+
   return (
-    <footer className="text-black p-1">
+    <footer className="text-black dark:text-white p-1">
       <div className="container mx-auto">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
@@ -16,30 +16,30 @@ function Footer() {
         >
           <SocialMediaIcons iconWidth={8} iconHeight={8} iconSize={1} />
         </motion.div>
-        <motion.div 
+        <motion.div
           className="flex flex-col items-center"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
         >
-          <motion.p 
-            className="text-xs"
+          <motion.p
+            className="text-xs text-gray-800 dark:text-gray-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.9 }}
           >
-            Copyright &copy; {currentYear} <span className="my-name font-bold text-blue-600">Ishaan Jain</span>
+            Copyright &copy; {currentYear} <span className="my-name font-bold text-blue-600 dark:text-blue-400">Ishaan Jain</span>
           </motion.p>
-          <motion.p 
-            className="text-xs"
+          <motion.p
+            className="text-xs text-gray-800 dark:text-gray-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 1.1 }}
           >
-            Developed and Designed by <span className="my-name font-bold text-blue-600">Ishaan Jain</span>
+            Developed and Designed by <span className="my-name font-bold text-blue-600 dark:text-blue-400">Ishaan Jain</span>
           </motion.p>
-          <motion.p 
-            className="text-xs"
+          <motion.p
+            className="text-xs text-gray-800 dark:text-gray-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 1.3 }}
