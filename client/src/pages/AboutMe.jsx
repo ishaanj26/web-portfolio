@@ -4,83 +4,80 @@ import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiNextdotjs, SiJavascript, SiTailwindcss, SiExpress, SiFirebase, SiC, SiPython, SiGithub, SiFlutter } from "react-icons/si";
 import data from "../data.json";
 
-const iconMap = {
-    FaReact, FaNodeJs, SiMongodb, SiNextdotjs, SiJavascript, SiTailwindcss, SiExpress, SiFirebase, SiC, SiPython, SiGithub, SiFlutter
-};
-// const techIcons = [
-//     {
-//         icon: <SiMongodb size={50} className="text-green-500" />,
-//         id: 1,
-//         name: "MongoDB",
-//         color: "#4DB33D",
-//     },
-//     {
-//         icon: <FaNodeJs size={50} className="text-green-400" />,
-//         id: 2,
-//         name: "Node.js",
-//         color: "#68A063",
-//     },
-//     {
-//         icon: <FaReact size={50} className="text-blue-400" />,
-//         id: 3,
-//         name: "React",
-//         color: "#61DAFB",
-//     },
-//     {
-//         icon: <SiNextdotjs size={50} className="text-white" />,
-//         id: 4,
-//         name: "Next.js",
-//         color: "#FFFFFF",
-//     },
-//     {
-//         icon: <SiJavascript size={50} className="text-yellow-300" />,
-//         id: 5,
-//         name: "JavaScript",
-//         color: "#F7DF1E",
-//     },
-//     {
-//         icon: <SiTailwindcss size={50} className="text-blue-300" />,
-//         id: 6,
-//         name: "Tailwind CSS",
-//         color: "#38B2AC",
-//     },
-//     {
-//         icon: <SiExpress size={50} className="text-gray-500" />,
-//         id: 7,
-//         name: "Express",
-//         color: "#828282",
-//     },
-//     {
-//         icon: <SiFirebase size={50} className="text-yellow-500" />,
-//         id: 8,
-//         name: "Firebase",
-//         color: "#FFCA28",
-//     },
-//     {
-//         icon: <SiC size={50} className="text-blue-500" />,
-//         id: 9,
-//         name: "C",
-//         color: "#A8B9CC",
-//     },
-//     {
-//         icon: <SiPython size={50} className="text-yellow-400" />,
-//         id: 10,
-//         name: "Python",
-//         color: "#3776AB",
-//     },
-//     {
-//         icon: <SiFlutter size={50} className="text-blue-500" />,
-//         id: 11,
-//         name: "Flutter",
-//         color: "#02569B",
-//     },
-//     {
-//         icon: <SiGithub size={50} className="text-white" />,
-//         id: 12,
-//         name: "GitHub",
-//         color: "#FFFFFF",
-//     },
-// ]
+const techIcons = [
+    {
+        icon: <SiMongodb size={50} className="text-green-500" />,
+        id: 1,
+        name: "MongoDB",
+        color: "#4DB33D",
+    },
+    {
+        icon: <FaNodeJs size={50} className="text-green-400" />,
+        id: 2,
+        name: "Node.js",
+        color: "#68A063",
+    },
+    {
+        icon: <FaReact size={50} className="text-blue-400" />,
+        id: 3,
+        name: "React",
+        color: "#61DAFB",
+    },
+    {
+        icon: <SiNextdotjs size={50} className="text-white" />,
+        id: 4,
+        name: "Next.js",
+        color: "#FFFFFF",
+    },
+    {
+        icon: <SiJavascript size={50} className="text-yellow-300" />,
+        id: 5,
+        name: "JavaScript",
+        color: "#F7DF1E",
+    },
+    {
+        icon: <SiTailwindcss size={50} className="text-blue-300" />,
+        id: 6,
+        name: "Tailwind CSS",
+        color: "#38B2AC",
+    },
+    {
+        icon: <SiExpress size={50} className="text-gray-500" />,
+        id: 7,
+        name: "Express",
+        color: "#828282",
+    },
+    {
+        icon: <SiFirebase size={50} className="text-yellow-500" />,
+        id: 8,
+        name: "Firebase",
+        color: "#FFCA28",
+    },
+    {
+        icon: <SiC size={50} className="text-blue-500" />,
+        id: 9,
+        name: "C",
+        color: "#A8B9CC",
+    },
+    {
+        icon: <SiPython size={50} className="text-yellow-400" />,
+        id: 10,
+        name: "Python",
+        color: "#3776AB",
+    },
+    {
+        icon: <SiFlutter size={50} className="text-blue-500" />,
+        id: 11,
+        name: "Flutter",
+        color: "#02569B",
+    },
+    {
+        icon: <SiGithub size={50} className="text-white" />,
+        id: 12,
+        name: "GitHub",
+        color: "#FFFFFF",
+    },
+]
 
 function AboutMe() {
     const radius = 80; // Adjust for bigger circular motion
@@ -108,23 +105,21 @@ function AboutMe() {
                         animate={{ rotate: 360 }}
                         transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
                     >
-                        {data.techIcons.map((item, index) => {
+                        {techIcons.map((item, index) => {
                             const isHovered = hoveredIcon === item.id
-                            const IconComponent = iconMap[item.icon];
                             return (
                                 <motion.div
                                     key={item.id}
                                     className="absolute bg-black p-4 rounded-full hover:scale-110"
                                     style={{
-                                        top: `${50 + 50 * Math.sin((index / data.techIcons.length) * 2 * Math.PI)}%`,
-                                        left: `${50 + 50 * Math.cos((index / data.techIcons.length) * 2 * Math.PI)}%`,
+                                        top: `${50 + 50 * Math.sin((index / techIcons.length) * 2 * Math.PI)}%`,
+                                        left: `${50 + 50 * Math.cos((index / techIcons.length) * 2 * Math.PI)}%`,
                                         transform: "translate(-50%, -50%)",
                                         boxShadow: `0 0 20px 5px ${item.color}80`,
 
                                     }}
                                 >
-                                    {IconComponent && <IconComponent />}
-
+                                    {item.icon} 
                                 </motion.div>
                             )
                         })}
