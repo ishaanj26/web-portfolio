@@ -2,81 +2,85 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiNextdotjs, SiJavascript, SiTailwindcss, SiExpress, SiFirebase, SiC, SiPython, SiGithub, SiFlutter } from "react-icons/si";
+import data from "../data.json";
 
-const techIcons = [
-    {
-        icon: <SiMongodb size={50} className="text-green-500" />,
-        id: 1,
-        name: "MongoDB",
-        color: "#4DB33D",
-    },
-    {
-        icon: <FaNodeJs size={50} className="text-green-400" />,
-        id: 2,
-        name: "Node.js",
-        color: "#68A063",
-    },
-    {
-        icon: <FaReact size={50} className="text-blue-400" />,
-        id: 3,
-        name: "React",
-        color: "#61DAFB",
-    },
-    {
-        icon: <SiNextdotjs size={50} className="text-white" />,
-        id: 4,
-        name: "Next.js",
-        color: "#FFFFFF",
-    },
-    {
-        icon: <SiJavascript size={50} className="text-yellow-300" />,
-        id: 5,
-        name: "JavaScript",
-        color: "#F7DF1E",
-    },
-    {
-        icon: <SiTailwindcss size={50} className="text-blue-300" />,
-        id: 6,
-        name: "Tailwind CSS",
-        color: "#38B2AC",
-    },
-    {
-        icon: <SiExpress size={50} className="text-gray-500" />,
-        id: 7,
-        name: "Express",
-        color: "#828282",
-    },
-    {
-        icon: <SiFirebase size={50} className="text-yellow-500" />,
-        id: 8,
-        name: "Firebase",
-        color: "#FFCA28",
-    },
-    {
-        icon: <SiC size={50} className="text-blue-500" />,
-        id: 9,
-        name: "C",
-        color: "#A8B9CC",
-    },
-    {
-        icon: <SiPython size={50} className="text-yellow-400" />,
-        id: 10,
-        name: "Python",
-        color: "#3776AB",
-    },
-    {
-        icon: <SiFlutter size={50} className="text-blue-500" />,
-        id: 11,
-        name: "Flutter",
-        color: "#02569B",
-    },
-    {
-        icon: <SiGithub size={50} className="text-white" />,
-        id: 12,
-        name: "GitHub",
-        color: "#FFFFFF",
-    },
-]
+const iconMap = {
+    FaReact, FaNodeJs, SiMongodb, SiNextdotjs, SiJavascript, SiTailwindcss, SiExpress, SiFirebase, SiC, SiPython, SiGithub, SiFlutter
+};
+// const techIcons = [
+//     {
+//         icon: <SiMongodb size={50} className="text-green-500" />,
+//         id: 1,
+//         name: "MongoDB",
+//         color: "#4DB33D",
+//     },
+//     {
+//         icon: <FaNodeJs size={50} className="text-green-400" />,
+//         id: 2,
+//         name: "Node.js",
+//         color: "#68A063",
+//     },
+//     {
+//         icon: <FaReact size={50} className="text-blue-400" />,
+//         id: 3,
+//         name: "React",
+//         color: "#61DAFB",
+//     },
+//     {
+//         icon: <SiNextdotjs size={50} className="text-white" />,
+//         id: 4,
+//         name: "Next.js",
+//         color: "#FFFFFF",
+//     },
+//     {
+//         icon: <SiJavascript size={50} className="text-yellow-300" />,
+//         id: 5,
+//         name: "JavaScript",
+//         color: "#F7DF1E",
+//     },
+//     {
+//         icon: <SiTailwindcss size={50} className="text-blue-300" />,
+//         id: 6,
+//         name: "Tailwind CSS",
+//         color: "#38B2AC",
+//     },
+//     {
+//         icon: <SiExpress size={50} className="text-gray-500" />,
+//         id: 7,
+//         name: "Express",
+//         color: "#828282",
+//     },
+//     {
+//         icon: <SiFirebase size={50} className="text-yellow-500" />,
+//         id: 8,
+//         name: "Firebase",
+//         color: "#FFCA28",
+//     },
+//     {
+//         icon: <SiC size={50} className="text-blue-500" />,
+//         id: 9,
+//         name: "C",
+//         color: "#A8B9CC",
+//     },
+//     {
+//         icon: <SiPython size={50} className="text-yellow-400" />,
+//         id: 10,
+//         name: "Python",
+//         color: "#3776AB",
+//     },
+//     {
+//         icon: <SiFlutter size={50} className="text-blue-500" />,
+//         id: 11,
+//         name: "Flutter",
+//         color: "#02569B",
+//     },
+//     {
+//         icon: <SiGithub size={50} className="text-white" />,
+//         id: 12,
+//         name: "GitHub",
+//         color: "#FFFFFF",
+//     },
+// ]
 
 function AboutMe() {
     const radius = 80; // Adjust for bigger circular motion
@@ -85,7 +89,7 @@ function AboutMe() {
 
     return (
         <section className="mt-10 mb-10 flex flex-col items-center justify-center py-10 px-5">
-             <motion.h1
+            <motion.h1
                 className=" my-name  mb-20 lg:mb-10 text-4xl md:text-6xl font-bold tracking-tight"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -104,8 +108,9 @@ function AboutMe() {
                         animate={{ rotate: 360 }}
                         transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
                     >
-                        {techIcons.map((item, index) => {
+                        {data.techIcons.map((item, index) => {
                             const isHovered = hoveredIcon === item.id
+                            const IconComponent = iconMap[item.icon];
                             return (
                                 <motion.div
                                     key={item.id}
@@ -118,7 +123,8 @@ function AboutMe() {
 
                                     }}
                                 >
-                                    {item.icon}
+                                    {IconComponent && <IconComponent />}
+
                                 </motion.div>
                             )
                         })}
@@ -212,7 +218,7 @@ function AboutMe() {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.98 }}
                                 >
-                                   <a href="#projects"> <span>View My Work</span> </a>
+                                    <a href="#projects"> <span>View My Work</span> </a>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path
                                             fillRule="evenodd"
