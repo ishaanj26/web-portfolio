@@ -116,8 +116,8 @@ function AboutMe() {
                                     key={item.id}
                                     className="absolute bg-black p-4 rounded-full hover:scale-110"
                                     style={{
-                                        top: `${50 + 50 * Math.sin((index / techIcons.length) * 2 * Math.PI)}%`,
-                                        left: `${50 + 50 * Math.cos((index / techIcons.length) * 2 * Math.PI)}%`,
+                                        top: `${50 + 50 * Math.sin((index / data.techIcons.length) * 2 * Math.PI)}%`,
+                                        left: `${50 + 50 * Math.cos((index / data.techIcons.length) * 2 * Math.PI)}%`,
                                         transform: "translate(-50%, -50%)",
                                         boxShadow: `0 0 20px 5px ${item.color}80`,
 
