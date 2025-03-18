@@ -32,9 +32,6 @@ function ContactMe() {
             const data = await response.json();
 
             if (response.ok) {
-                // alert("mustarrrd successfully!");
-                toast.success('Form submitted successfully!');
-
                 setSubmitted(true);
                 setFormState({ name: "", email: "", description: "" });
             } else {
