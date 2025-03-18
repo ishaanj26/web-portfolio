@@ -4,44 +4,45 @@ import { motion } from 'framer-motion';
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    
+
     const toggleMenu = () => setIsOpen(!isOpen);
-    
+
     // Reusable animation variants
     const navItemVariants = {
         hidden: { opacity: 0, x: -100 },
-        visible: (i) => ({ 
-            opacity: 1, 
-            x: 0, 
-            transition: { delay: i * 0.1 } 
+        visible: (i) => ({
+            opacity: 1,
+            x: 0,
+            transition: { delay: i * 0.1 }
         })
     };
-    
+
     const mobileNavItemVariants = {
         hidden: { opacity: 0, y: 20 },
-        visible: (i) => ({ 
-            opacity: 1, 
-            y: 0, 
-            transition: { delay: i * 0.1, duration: 0.3 } 
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: { delay: i * 0.1, duration: 0.3 }
         })
     };
-    
+
     return (
         <nav className="bg-white dark:bg-gray-900 py-4 poppins-400 shadow-md dark:shadow-blue-900/20">
             <div className="container mx-auto flex justify-between items-center px-4">
                 {/* Logo and Name */}
                 <div className='flex flex-row gap-2 items-center'>
-                    <a href="#nav" className="text-blue-500 font-bold">
+                    <a href="#nav" className="text-blue-500 font-bold flex items-center">
                         <img
                             src="assets/logo.png"
                             draggable="false"
                             alt="Logo"
-                            className='h-12 md:h-15'
+                            style={{ height: '48px' }} /* Fixed pixel height */
+                            className='w-auto object-contain'
                         />
                     </a>
-                    <p className='my-name text-lg md:text-base text-gray-800 dark:text-gray-200'>Ishaan Jain</p>
+                    <p className='my-name text-sm md:text-base lg:text-lg text-gray-800 dark:text-gray-200'>Ishaan Jain</p>
                 </div>
-                
+
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center space-x-4 list-none">
                     {data.navbarItems.map((item, index) => (
@@ -53,9 +54,9 @@ function Navbar() {
                             animate="visible"
                             variants={navItemVariants}
                         >
-                            <a
-                                href={item.href}
-                                className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition duration-300 ease-in-out active:text-blue-700 text-sm lg:text-2xl font-medium"
+
+                            <a href={item.href}
+                                className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition duration-300 ease-in-out active:text-blue-700 text-sm md:text-base lg:text-lg font-medium"
                             >
                                 {item.name}
                             </a>
@@ -64,7 +65,7 @@ function Navbar() {
 
                     <ResumeButton isDesktop={true} />
                 </div>
-                
+
                 {/* Mobile Menu Button */}
                 <div className="md:hidden flex justify-end">
                     <motion.button
@@ -82,7 +83,7 @@ function Navbar() {
                     <MobileSidebar isOpen={isOpen} toggleMenu={toggleMenu} variants={mobileNavItemVariants} />
                 </div>
             </div>
-        </nav>
+        </nav >
     );
 }
 
@@ -95,7 +96,7 @@ const ResumeButton = ({ isDesktop, isOpen }) => {
             transition={{ duration: 0.5, delay: 0.4 }}
             href="/assets/RESUME.pdf"
             download="Ishaan_Jain_Resume.pdf"
-            className={isDesktop ? 
+            className={isDesktop ?
                 "border-2 border-blue-900 dark:border-blue-700 text-blue-500 dark:text-blue-400 px-6 py-3 rounded-lg text-lg font-semibold shadow-md transition-all duration-300 hover:bg-blue-900 dark:hover:bg-blue-800 hover:text-white hover:scale-105" :
                 "relative w-full bg-white hover:bg-blue-50 dark:bg-gray-100 dark:hover:bg-gray-200 text-blue-600 dark:text-blue-700 px-4 py-2 transition-colors duration-300 rounded-lg text-sm font-semibold shadow-lg flex items-center justify-center group overflow-hidden"
             }
