@@ -69,7 +69,7 @@ function Services() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               {IconComponent && <IconComponent className={`text-2xl sm:text-3xl md:text-4xl text-${service.iconColor}-500`} />}
-              <h2 className="text-center sm:mt-4 text-lg sm:text-2xl font-semibold">{service.title}</h2>
+              <h2 className="text-center dark:text-white sm:mt-4 text-lg sm:text-2xl font-semibold">{service.title}</h2>
               <p className=" sm:mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-300 text-center">{service.description}</p>
             </motion.div>
           )

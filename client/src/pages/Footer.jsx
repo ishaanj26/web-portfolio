@@ -6,7 +6,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="text-black dark:text-white p-1">
+    <footer className="text-black dark:text-white dark:from-gray-950 dark:to-gray-900 p-1">
       <div className="container mx-auto">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
