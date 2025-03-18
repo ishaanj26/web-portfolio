@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const moment = require('moment');
+const moment = require('moment-timezone');
 const cors = require('cors');
 
 const app = express();
@@ -34,7 +34,7 @@ const FormData = mongoose.model('FormData', FormDataSchema);
 app.post('/submit', async (req, res) => {
     try {
         const { name, email, description } = req.body;
-        const date = moment(Date()).format('MMMM D, YYYY h:mm:ss A'); // Create a date object using Moment.js
+        const date = moment().tz("Asia/Kolkata").format('MMMM D, YYYY h:mm:ss A'); // Create a date object using Moment.js
         const newFormEntry = new FormData({
             name, email, description, timestamp: date
         });
