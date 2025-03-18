@@ -44,13 +44,13 @@ function Home() {
                 transition={{ duration: 0.5 }}
                 className="text-center md:text-left md:w-1/2"
             >
-                <h2 className="text-2xl md:text-3xl text-gray-500">Hi There 👋</h2>
-                <h1 className="text-5xl md:text-6xl font-extrabold mt-2">
-                    I'm <span className="text-blue-500">Ishaan Jain</span>
+                <h2 className="text-2xl md:text-3xl text-gray-500 dark:text-gray-400">Hi There 👋</h2>
+                <h1 className="text-5xl md:text-6xl font-extrabold mt-2 text-gray-900 dark:text-white">
+                    I'm <span className="text-blue-500 dark:text-blue-400">Ishaan Jain</span>
                 </h1>
-                <h2 className="text-2xl md:text-4xl mt-2 text-gray-700">
+                <h2 className="text-2xl md:text-4xl mt-2 text-gray-700 dark:text-gray-300">
                     I'm {getArticle(currentText)}{" "}
-                    <span ref={typedRef} className="text-blue-400"></span>
+                    <span ref={typedRef} className="text-blue-400 dark:text-blue-300"></span>
                 </h2>
 
                 {/* Buttons */}
@@ -65,7 +65,7 @@ function Home() {
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                         href="#contact-me"
-                        className="bg-blue-600 text-white px-6 py-3 rounded-lg md:text-lg font-semibold shadow-md transition-all duration-300 hover:bg-blue-700 hover:scale-105"
+                        className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white px-6 py-3 rounded-lg md:text-lg font-semibold shadow-md dark:shadow-blue-900/50 transition-all duration-300 hover:scale-105"
                     >
                         Hire Me
                     </motion.a>
@@ -75,7 +75,7 @@ function Home() {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         href="/assets/RESUME.pdf"
                         download="Ishaan_Jain_Resume.pdf"
-                        className="border-2 border-blue-900 text-blue-500 px-6 py-3 rounded-lg text-lg font-semibold shadow-md transition-all duration-300 hover:bg-blue-900 hover:text-white hover:scale-105"
+                        className="border-2 border-blue-900 dark:border-blue-500 text-blue-500 dark:text-blue-400 px-6 py-3 rounded-lg text-lg font-semibold shadow-md transition-all duration-300 hover:bg-blue-900 dark:hover:bg-blue-700 hover:text-white dark:hover:text-white hover:scale-105"
                     >
                         Resume
                     </motion.a>
@@ -100,7 +100,7 @@ function Home() {
                 <div className="relative group">
                     {/* Rotating Glowing Halo Effect */}
                     <div className="absolute inset-0 w-full h-full flex items-center justify-center">
-                        <div className="absolute w-80 h-96 md:w-96 md:h-[26rem] rounded-xl bg-gradient-to-r from-blue-800 to-blue-300 opacity-40 blur-2xl animate-spin-slow"></div>
+                        <div className="absolute w-80 h-96 md:w-96 md:h-[26rem] rounded-xl bg-gradient-to-r from-blue-800 to-blue-300 dark:from-blue-700 dark:to-blue-400 opacity-40 dark:opacity-60 blur-2xl animate-spin-slow"></div>
                     </div>
 
                     {/* Glassmorphism Effect Container */}
@@ -108,12 +108,12 @@ function Home() {
                         initial={{ scale: 0.5 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
-                        className="relative p-2 rounded-xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-300 group-hover:scale-105 group-hover:shadow-blue-500/50"
+                        className="relative p-2 rounded-xl bg-white/10 dark:bg-black/10 backdrop-blur-lg border border-white/20 dark:border-white/10 shadow-lg hover:shadow-2xl transition-all duration-300 group-hover:scale-105 group-hover:shadow-blue-500/50 dark:group-hover:shadow-blue-400/40"
                     >
                         <img
                             src="assets/ishaan_img.jpeg"
                             alt="Profile"
-                            className="block rounded-3xl w-72 h-80 md:w-80 md:h-96 object-cover object-center shadow-md hover:shadow-xl transition-all duration-300  brightness-80"
+                            className="block rounded-3xl w-72 h-80 md:w-80 md:h-96 object-cover object-center shadow-md hover:shadow-xl transition-all duration-300 brightness-80 dark:brightness-90"
                         />
                     </motion.div>
                 </div>
