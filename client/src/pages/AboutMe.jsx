@@ -86,148 +86,154 @@ function AboutMe() {
 
     return (
         <section className="mt-10 mb-10 flex flex-col items-center justify-center py-10 px-5">
-            <motion.h1
-                className=" my-name  mb-20 lg:mb-10 text-4xl md:text-6xl font-bold tracking-tight"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-            >
-                <span className="text-blue-500"> About </span> Me
-
-            </motion.h1>
-            <div className="gap-20 flex flex-col lg:flex-row items-center w-full max-w-5xl">
-
-                {/* Animated Icons */}
-                <div className="relative w-96 h-96 flex items-center justify-center mb-6 md:mb-0">
-                    {/* Rotating Icons */}
-                    <motion.div
-                        className="absolute w-full h-full flex items-center justify-center"
-                        animate={{ rotate: 360 }}
-                        transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-                    >
-                        {techIcons.map((item, index) => {
-                            const isHovered = hoveredIcon === item.id
-                            return (
-                                <motion.div
-                                    key={item.id}
-                                    className="absolute bg-black p-4 rounded-full hover:scale-110"
-                                    style={{
-                                        top: `${50 + 50 * Math.sin((index / techIcons.length) * 2 * Math.PI)}%`,
-                                        left: `${50 + 50 * Math.cos((index / techIcons.length) * 2 * Math.PI)}%`,
-                                        transform: "translate(-50%, -50%)",
-                                        boxShadow: `0 0 20px 5px ${item.color}80`,
-
-                                    }}
-                                >
-                                    {item.icon} 
-                                </motion.div>
-                            )
-                        })}
-                    </motion.div>
-                    <motion.div
-                        className="absolute z-10 bg-gradient-to-br from-gray-800 to-gray-900 w-64 h-64 rounded-full flex items-center justify-center overflow-hidden"
-                        style={{
-                            boxShadow: "0 0 30px 5px rgba(59, 130, 246, 0.3)",
-                        }}
-                        whileHover={{ scale: 1.05 }}
-                        onHoverStart={() => setIsProfileHovered(true)}
-                        onHoverEnd={() => setIsProfileHovered(false)}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        {/* Animated border */}
-                        <div className="absolute inset-0 rounded-full overflow-hidden">
-                            <div
-                                className="absolute inset-0 rounded-full border-4 border-transparent bg-clip-border"
-                                style={{
-                                    backgroundImage: "linear-gradient(to right, #3b82f6, #1d4ed8, #3b82f6)",
-                                    backgroundSize: "200% 100%",
-                                    animation: "gradientMove 3s linear infinite",
-                                }}
-                            />
-                        </div>
-
-                        <div className="absolute inset-2 rounded-full overflow-hidden bg-gray-900 flex items-center justify-center">
-                            <motion.img
-                                src="assets/gifs/logoVideo.gif"
-                                alt="Welcoming Logo"
-                                className="w-[50%] h-[80%] object-cover"
-                                animate={{
-                                    scale: isProfileHovered ? 1.1 : 1,
-                                }}
-                                transition={{ duration: 0.3 }}
-                            />
-                        </div>
-                    </motion.div>
-                </div>
-
-                {/* Text Content */}
+        <motion.h1
+            className="my-name mb-10 text-4xl md:text-6xl font-bold tracking-tight"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
+            <span className="text-blue-500">About</span> Me
+        </motion.h1>
+        
+        <div className="gap-10 lg:gap-20 flex flex-col lg:flex-row items-center w-full max-w-5xl">
+            {/* Animated Icons - Responsive Container */}
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xs xl:max-w-sm aspect-square flex items-center justify-center">
+                {/* Rotating Icons */}
                 <motion.div
-                    className="max-w-xl "
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="absolute w-full h-full flex items-center justify-center"
+                    animate={{ rotate: 360 }}
+                    transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
                 >
-                    <div className="bg-gradient-to-b from-gray-900 to-black backdrop-blur-sm p-8 rounded-2xl border border-gray-800 shadow-xl">
-                        <h2 className="text-3xl font-bold mb-6 text-white">
-                            Hi, I'm <span className="text-blue-500">Ishaan Jain</span>
-                        </h2>
-
-                        <div className="space-y-4 text-gray-300">
-                            <p className="text-lg leading-relaxed">
-                                A passionate web developer from Delhi, India. Currently pursuing{" "}
-                                <span className="text-blue-400 font-medium">B.Tech in Computer Science at VIPS, IPU</span>.
-                            </p>
-
-                            <p className="text-lg leading-relaxed">
-                                My journey in technology is driven by curiosity and a desire to create meaningful digital experiences
-                                that solve real problems.
-                            </p>
-
-                            <div className="pt-4 border-t border-gray-700">
-                                <h3 className="text-xl font-semibold mb-3 text-white">What I do</h3>
-                                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                    <li className="flex items-center">
-                                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                                        <span>Full-stack Development</span>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                                        <span>MERN Stack Specialist</span>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                                        <span>Responsive Web Design</span>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                                        <span>Mobile App Development</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className="pt-6">
-                                <motion.button
-                                    className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium rounded-lg flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.98 }}
-                                >
-                                    <a href="#projects"> <span>View My Work</span> </a>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    {techIcons.map((item, index) => {
+                        const isHovered = hoveredIcon === item.id;
+                        const orbitRadius = "40%"; // Smaller radius for better mobile view
+                        
+                        return (
+                            <motion.div
+                                key={item.id}
+                                className="absolute bg-black p-2 sm:p-3 md:p-4 rounded-full hover:scale-110"
+                                style={{
+                                    top: `calc(50% + ${orbitRadius} * ${Math.sin((index / techIcons.length) * 2 * Math.PI)})`,
+                                    left: `calc(50% + ${orbitRadius} * ${Math.cos((index / techIcons.length) * 2 * Math.PI)})`,
+                                    transform: "translate(-50%, -50%)",
+                                    boxShadow: `0 0 20px 5px ${item.color}80`,
+                                }}
+                            >
+                                <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 flex items-center justify-center">
+                                    {item.icon}
+                                </div>
+                            </motion.div>
+                        );
+                    })}
+                </motion.div>
+                
+                {/* Center Logo */}
+                <motion.div
+                    className="absolute z-10 bg-gradient-to-br from-gray-800 to-gray-900 w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-60 lg:h-60 rounded-full flex items-center justify-center overflow-hidden"
+                    style={{
+                        boxShadow: "0 0 30px 5px rgba(59, 130, 246, 0.3)",
+                    }}
+                    whileHover={{ scale: 1.05 }}
+                    onHoverStart={() => setIsProfileHovered(true)}
+                    onHoverEnd={() => setIsProfileHovered(false)}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    {/* Animated border */}
+                    <div className="absolute inset-0 rounded-full overflow-hidden">
+                        <div
+                            className="absolute inset-0 rounded-full border-4 border-transparent bg-clip-border"
+                            style={{
+                                backgroundImage: "linear-gradient(to right, #3b82f6, #1d4ed8, #3b82f6)",
+                                backgroundSize: "200% 100%",
+                                animation: "gradientMove 3s linear infinite",
+                            }}
+                        />
+                    </div>
+    
+                    <div className="absolute inset-2 rounded-full overflow-hidden bg-gray-900 flex items-center justify-center">
+                        <motion.img
+                            src="assets/gifs/logoVideo.gif"
+                            alt="Welcoming Logo"
+                            className="w-[50%] h-[80%] object-cover"
+                            animate={{
+                                scale: isProfileHovered ? 1.1 : 1,
+                            }}
+                            transition={{ duration: 0.3 }}
+                        />
+                    </div>
+                </motion.div>
+            </div>
+    
+            {/* Text Content */}
+            <motion.div
+                className="w-full lg:w-auto flex-1"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+            >
+                <div className="bg-gradient-to-b from-gray-900 to-black backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-gray-800 shadow-xl">
+                    <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-white">
+                        Hi, I'm <span className="text-blue-500">Ishaan Jain</span>
+                    </h2>
+    
+                    <div className="space-y-3 sm:space-y-4 text-gray-300">
+                        <p className="text-base sm:text-lg leading-relaxed">
+                            A passionate web developer from Delhi, India. Currently pursuing{" "}
+                            <span className="text-blue-400 font-medium">B.Tech in Computer Science at VIPS, IPU</span>.
+                        </p>
+    
+                        <p className="text-base sm:text-lg leading-relaxed">
+                            My journey in technology is driven by curiosity and a desire to create meaningful digital experiences
+                            that solve real problems.
+                        </p>
+    
+                        <div className="pt-3 sm:pt-4 border-t border-gray-700">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-white">What I do</h3>
+                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                <li className="flex items-center">
+                                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                                    <span>Full-stack Development</span>
+                                </li>
+                                <li className="flex items-center">
+                                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                                    <span>MERN Stack Specialist</span>
+                                </li>
+                                <li className="flex items-center">
+                                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                                    <span>Responsive Web Design</span>
+                                </li>
+                                <li className="flex items-center">
+                                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                                    <span>Mobile App Development</span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div className="pt-4 sm:pt-6">
+                            <motion.button
+                                className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium rounded-lg flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.98 }}
+                            >
+                                <a href="#projects" className="flex items-center gap-2">
+                                    <span>View My Work</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path
                                             fillRule="evenodd"
                                             d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
                                             clipRule="evenodd"
                                         />
                                     </svg>
-                                </motion.button>
-                            </div>
+                                </a>
+                            </motion.button>
                         </div>
                     </div>
-                </motion.div>
-            </div>
-        </section >
+                </div>
+            </motion.div>
+        </div>
+    </section>
     );
 }
 
