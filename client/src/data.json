@@ -170,6 +170,31 @@
       ],
       "liveLink": "https://drive.google.com/file/d/1raG06slmqEfTZ1B0moTrCD8dqu0YqN7V/view?usp=sharing",
       "githubLink": "https://github.com/ishaanj26/machine_learning_project/tree/main/MovieRecommendation"
+    },
+    {
+      "id": 6,
+      "title": "Events Data Scraper",
+      "description": "a full-stack application designed to dynamically fetch,display, and interact with real-time event data sourced from Eventbrite.",
+      "image": "/assets/projects/event-data-scraper.png",
+      "technologies": [
+        "Puppeteer",
+        "Node.js",
+        "Express",
+        "React",
+        "Tailwind CSS",
+        "axios",
+        "Cors"
+      ],
+      "features": [
+        " Responsive Design",
+        "Dynamic Data Fetching",
+        "Get Ticket",
+        "Raw Data Visibility",
+        "Email Modal"
+      ],
+      "liveLink": "https://event-web-scrapper.vercel.app/",
+      "githubLink": "https://github.com/ishaanj26/Event-Web-Scrapper",
+      "mediumLink": "https://drive.google.com/file/d/1jefanHHOIjQdEeH1BSWsFvqePGcaUAmR/view"
     }
   ],
   "experiences": [
